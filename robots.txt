@@ -1,3 +1,5 @@
 User-agent: *
 Allow: /
 Disallow: /confirmation.html
+
+Sitemap: https://aerobox55.com/sitemap.xml

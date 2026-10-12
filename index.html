@@ -19,6 +19,12 @@ addEventListener("load", () => { if (!location.hash) scrollTo(0, 0); });
 <meta property="og:description" content="Box de 5 à 14,5 m² en conteneurs maritimes neufs, à partir de 49 € TTC par mois. Libre-service, réservation en ligne.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
+<meta property="og:url" content="https://aerobox55.com/">
+<meta property="og:image" content="https://aerobox55.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://aerobox55.com/">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,6 +34,8 @@ addEventListener("load", () => { if (!location.hash) scrollTo(0, 0); });
   "@context": "https://schema.org",
   "@type": "SelfStorage",
   "name": "Aerobox Verdun",
+  "url": "https://aerobox55.com/",
+  "image": "https://aerobox55.com/og-image.png",
   "legalName": "AEROBOX",
   "vatID": "FR26105404602",
   "taxID": "105404602",
@@ -875,7 +883,7 @@ if (CONFIG.facebookUrl) {
   document.querySelectorAll("[data-facebook]").forEach(a => { a.href = CONFIG.facebookUrl; a.hidden = false; });
   document.querySelectorAll("[data-facebook-li]").forEach(li => li.hidden = false);
   const ld = document.querySelector('script[type="application/ld+json"]');
-  try { const j = JSON.parse(ld.textContent); j.sameAs.push(CONFIG.facebookUrl); ld.textContent = JSON.stringify(j); } catch (e) {}
+  try { const j = JSON.parse(ld.textContent); if (!j.sameAs.includes(CONFIG.facebookUrl)) j.sameAs.push(CONFIG.facebookUrl); ld.textContent = JSON.stringify(j); } catch (e) {}
 }
 
 /* ---------- Carte et itinéraires ---------- */
