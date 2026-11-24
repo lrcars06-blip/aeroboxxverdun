@@ -7,6 +7,13 @@
 <meta name="description" content="Location de box de stockage à Verdun (55100), ZAC du Dragon. Plus de 70 box en conteneurs maritimes neufs de 5 à 14,5 m², dès 49 € TTC par mois. Libre-service : devis, réservation et caution en ligne, accès avec votre code, véhicule au pied du box.">
 <meta name="theme-color" content="#0051BE">
 <script>
+/* Retour du paiement de la caution (Stripe via Buxida) : paiement réussi → page de confirmation */
+(function(){try{
+  var q=new URLSearchParams(location.search);
+  if(q.get("payment_intent")&&q.get("redirect_status")==="succeeded"){location.replace("/confirmation.html");}
+}catch(e){}})();
+</script>
+<script>
 /* Intro : à chaque chargement et à chaque rafraîchissement, sauf si l'utilisateur limite les animations */
 (function(){try{
   if(matchMedia("(prefers-reduced-motion: reduce)").matches)return;

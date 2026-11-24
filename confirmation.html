@@ -75,7 +75,7 @@ main{padding:clamp(40px,6vw,72px) 0}
     <p>Un e-mail de confirmation vous a été envoyé par Buxida avec votre contrat et votre reçu. Pensez à vérifier vos courriers indésirables.</p>
 
     <div class="steps">
-      <div class="step"><span class="n">1</span><div><b>Votre code d'accès</b>Il vous est communiqué par e-mail dès le début de votre location. Il ouvre le portail du site 22h/24, 7 jours sur 7.</div></div>
+      <div class="step"><span class="n">1</span><div><b>Votre code d'accès</b>Il vous est transmis par Aerobox avant votre première venue, une fois votre dossier complet dans votre espace client (pièce d'identité, mandat de prélèvement). Il ouvre le portail du site 22h/24, 7 jours sur 7.</div></div>
       <div class="step"><span class="n">2</span><div><b>Votre cadenas</b>Il est fourni par Aerobox et obligatoire : c'est la condition pour que l'assurance couvre vos affaires. Il vous est remis lors de votre première venue.</div></div>
       <div class="step"><span class="n">3</span><div><b>Le jour J</b>8 rue Jean Norton Cru, ZAC du Dragon, Verdun, entre ISIS Médical et l'ancienne concession Volkswagen. Garez-vous au pied de votre box et déchargez devant vos portes.</div></div>
     </div>
@@ -97,7 +97,7 @@ main{padding:clamp(40px,6vw,72px) 0}
 <script>
 // Réglages : lien de l'espace client Buxida (laisser vide pour masquer le bouton),
 // et nom du paramètre d'URL que Buxida ajoute au retour pour la référence de réservation (ex. "ref"), s'il existe.
-const CONFIRM = { espaceClientUrl: "", refParam: "ref" };
+const CONFIRM = { espaceClientUrl: "https://espaceclient.buxida.com/", refParam: "ref" };
 const q = new URLSearchParams(location.search);
 const ref = CONFIRM.refParam && q.get(CONFIRM.refParam);
 if (ref) { document.getElementById("refVal").textContent = ref.replace(/[<>]/g, ""); document.getElementById("ref").hidden = false; }
